@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.err { display: none }
+
+body {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    background-image: url(./imgs/background.svg);
+    background-size: cover;
+}
+
+.container h1 {
+    font-family: 'Silkscreen', cursive;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.container .card {
+    box-shadow: 0 0 10px -5px;
+    background-color: #0001;
+
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 90%;
+
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 2rem;
+    overflow: scroll;
+}
+
+.icon-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 50%;
+    aspect-ratio: 1;
+
+    padding: 1rem;
+
+    transition: transform 1s;
+}
+
+.spin {
+    transform: rotate(360deg);
+}
+
+.icon-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px -5px black;
+}
+
+@media (min-width: 800px) or (orentation: landscape) {
+    .container {
+        display: none;
+    }
+
+    .err {
+        display: block;
+    }
+}
